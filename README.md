@@ -1,2 +1,17 @@
-# WealthWise-Finance-Manager
-WealthWise is a personal finance management web application built with Flask, Python, HTML, CSS, and SQL. It enables users to track income, expenses, savings, and financial goals with a clean and intuitive UI. Ideal for individuals looking to take control of their finances through insightful dashboards and detailed reports.
+# 💰 WealthWise Finance Manager
+
+WealthWise is a personal finance management web application built using Flask, Python, HTML, CSS, and SQL. It helps users track income, expenses, savings, and financial goals through a simple and clean interface.
+
+## Features
+
+- Income and expense tracking
+- Category-wise management
+- Financial summaries and dashboards
+- Goal setting and budget planning
+- SQL database integration
+
+## Tech Stack
+
+- Python (Flask)
+- HTML & CSS
+- SQL (MySQL/SQLite)
