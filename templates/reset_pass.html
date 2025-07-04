@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+
+<body class="auth-forms">
+    <div class="auth-container">
+        <h1 class="auth-h1">Reset Password</h1>
+
+        <form action="/reset-password" method="POST">
+            <input type='text' id='password' name='password' placeholder='Password' class='auth-input' required />
+            <input type='text' id='conf_password' name='conf_password' placeholder='Confirm Password' class='auth-input'required />
+            <input type="submit" value="Reset Password" class='auth-button' />
+        </form>
+
+        {% if reset_error_message %}
+        <div id='auth-error-message'>{{reset_error_message}}</div>    
+        {% endif %}
+        
+        <div class='auth-links'>
+            <a href="{{url_for('forgot_pass')}}">Back</a>
+        </div>
+    </div>
+
+
+</body>.

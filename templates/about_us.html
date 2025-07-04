@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About - WealthWise</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="dashboard">
+
+    <div class="navigation">
+      <nav>
+        <a href="{{ url_for('dashboard') }}">Dashboard</a>
+        <a href="{{url_for('add_transaction')}}">Record Transaction</a>
+        <a href="{{url_for('view_transaction')}}">View Transaction List</a>
+        <a href="{{url_for('analysis')}}">Analyze Trends</a>
+        <a href="#"class='highlighted'>About</a>
+        <form action="/logout" method="POST">
+          <input type="submit" value="Logout" class='logout-button' />
+        </form>
+      </nav>
+    </div>
+
+  
+  <header class="header">
+    <img src="/static/white-logo.png" alt="WealthWise Logo" class="logo">
+    <h1>WealthWise</h1>
+  </header>
+  <div style="
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 70px;
+    margin-left: 40px;
+    ">
+    <h2 style="
+      text-align: center;
+      font-size: 24px;
+      margin-top: -190px;
+      color: #333;
+      margin-left: -100px;
+    ">  About</h2>
+
+
+      <h4 style="
+        margin-left:-640px;
+        ">User ID: {{user_id}}</h4>
+      <h4 style='margin-left:-590px
+        '>User name: {{user_name}}</h4>
+
+    <p style="
+      text-align: center; 
+      font-size: 18px;
+      margin-top: 100px;
+      color: #555;
+      margin-left: 20px;
+    ">
+      WealthWise is a comprehensive finance tracker designed to help you manage your finances efficiently.<br> 
+      Our platform allows you to record your transactions, view your transaction list, analyze trends, and more.
+    </p>
+
+
+  </div>
+
+</body>
+</html>

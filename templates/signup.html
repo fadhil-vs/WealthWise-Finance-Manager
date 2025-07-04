@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="auth-forms">
+    <div class="auth-container">
+        <h1 class="auth-h1">Sign Up</h1>
+
+        <form action="/signup" method="POST">
+            <input type='text' id='username' name='username' placeholder='Username' class='auth-input' required/>
+            <input type='password' id='password' name='password' placeholder='Password' class='auth-input' required/>
+            <input type='password' id='conf_password' name='conf_password' placeholder='Confirm Password' class='auth-input' required/>
+            <input type='text' id='email' name='email' placeholder='Email' class='auth-input' required/>
+            <select name="security_question" id="security_question" required>
+                <option value="" disabled selected>Select Your Security Question</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </select>
+
+            <input type='text' id='security_answer' name='security_answer' placeholder='Security Answer' class='auth-input' required/>
+
+            <input type="submit" value="Sign Up" class='auth-button'/>
+        </form>
+
+        {% if signup_error_message %}
+        <div id='auth-error-message'>{{signup_error_message}}</div>    
+        {% endif %}
+
+        <div class='auth-links'>
+            <a href="{{url_for(session['previous_page'])}}">Back</a>
+        </div>
+    </div>
+
+
+</body>

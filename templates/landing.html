@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WealthWise - Your Finance Companion</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #78c57f, #a7f3c2);
+      color: #2c3e50;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .container {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 60px 40px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      width: 80px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #388e3c;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .go-button {
+      background-color: #81c784;
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .go-button:hover {
+      background-color: #66bb6a;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img src="./static/white-logo.png" alt="WealthWise Logo" class='logo'> 
+    <h1>Welcome to WealthWise</h1>
+    <p>Your smart partner in managing and tracking your financial journey.</p>
+    <a href="{{ url_for('login') }}" class="go-button">Go to Accounts</a>
+  </div>
+
+</body>
+</html>

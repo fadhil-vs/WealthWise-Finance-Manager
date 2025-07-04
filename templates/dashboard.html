@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Finance Tracker</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body class="dashboard" id='dashboard-body'>
+    <header class="header">
+        <h1>WealthWise</h1>
+    </header>    
+
+    <div class="navigation">
+        <nav>
+            <a href="#" class="highlighted">Dashboard</a>
+            <a href="{{url_for('add_transaction')}}">Record Transaction</a>
+            <a href="{{url_for('view_transaction')}}">View Transaction List</a>
+            <a href="{{url_for('analysis')}}">Analyze Trends</a>
+            <a href="{{url_for('about_us')}}"> About us</a>
+        </nav>
+        <form action="/logout" method="POST">
+            <input type="submit" value="Logout" class='logout-button' />
+        </form>
+    </div>
+
+    <main class="main">
+        <div class="main-content">
+            <h2>Welcome to WealthWise</h2>
+            <p>Track your finances efficiently and stay in control of your money.</p>
+            <h4 style='
+                margin-top: 100px;
+                color:red'>Total expense: {{expense}}</h4>
+            <h4 style='
+                color:green;'>Total income: {{income}}</h4>
+            {% if net < 0 %}
+                <h3 style="color:red">Net PnL: {{ net }}</h3>
+            {% else %}
+                <h3 style="color:green">Net PnL: {{ net }}</h3>
+            {% endif %}
+
+        </div>
+    </main>
+    <img src='/static/white-logo.png' alt="WealthWise Logo" class="logo">
+
+</body>
+
+</html>

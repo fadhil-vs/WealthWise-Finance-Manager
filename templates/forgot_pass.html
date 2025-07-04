@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="./static/style.css">
+</head>
+
+<body class="auth-forms">
+    <div class="auth-container">
+        <h1 class="auth-h1">Forgot Password</h1>
+
+        <form action="/forgot-password" method="POST">
+            <input type='text' id='username' name='username' placeholder='Username' class='auth-input' required/>
+            <select name="security_question" id="security_question" required>
+                <option value="" disabled selected>Select Your Security Question</option>
+                <option value="1">Where is your birth place?</option>
+                <option value="2">Favorite Hobby?</option>
+                <option value="3">Your Past School ?</option>
+                <option value="4">Favorite Game?</option>
+            </select>
+            <input type='text' id='security_answer' name='security_answer' placeholder='Security Answer'class='auth-input' required/>
+            <input type="submit" value="Retrieve Details" class='auth-button' />
+        </form>
+        
+        {% if forgot_error_message %}
+        <div id='auth-error-message'>{{forgot_error_message}}</div>    
+        {% endif %}
+        
+        <div class='auth-links'>
+            <a href="{{url_for(session['previous_page'])}}">Back</a>
+        </div>
+    </div>
+
+
+</body>
