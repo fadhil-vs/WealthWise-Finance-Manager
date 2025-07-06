@@ -1,6 +1,6 @@
 # 💰 WealthWise Finance Manager 1.0
 
-**WealthWise** is a personal finance management web application designed to help users track and optimize their finances with ease. It features income/expense management, visual dashboards, goal tracking, and a secure login system — all built using **Flask**, **Python**, **SQL**, and **HTML/CSS**.
+**WealthWise** is a personal finance management web application that helps users securely track income and expenses with real-time summaries and visual charts. Built using **Flask**, **Python**, **SQL**, and **HTML/CSS**, it supports multi-user login and is ideal for individuals managing their day-to-day finances.
 
 🔗 **🌐 Live Demo:** [https://wealthwise-finance-manager-version-1-0.onrender.com](https://wealthwise-finance-manager-version-1-0.onrender.com)  
 🔗 **📦 Source Code:** [https://github.com/fadhil-vs/WealthWise-Finance-Manager](https://github.com/fadhil-vs/WealthWise-Finance-Manager)
@@ -9,55 +9,48 @@
 
 ## ✨ Features
 
-✅ **User Authentication**  
-- Secure login system using Flask sessions  
-- User-specific finance data (no data overlap)
+✅ **User Authentication with Session Handling**  
+- Secure login and logout system  
+- Data is stored and displayed per user (multi-user supported)
 
-✅ **Income & Expense Tracking**  
-- Add, edit, and delete income and expense entries  
-- Categorize entries (e.g., salary, rent, groceries, bills)
+✅ **Income & Expense Management**  
+- Add, edit, and delete income/expense entries  
+- Categorize entries (e.g., food, transport, salary, utilities)  
+- View real-time financial summaries
 
-✅ **Visual Dashboards**  
-- Real-time financial summary  
-- Interactive **bar and pie charts** using Chart.js  
-- Easy-to-understand graphical analysis
+✅ **Interactive Visual Charts**  
+- Pie charts and bar graphs using **Chart.js**  
+- Visual breakdown of expenses by category
 
-✅ **Goal & Budget Planning**  
-- Set monthly savings or spending goals  
-- Track progress visually with indicators
+✅ **Transaction History Table**  
+- View all past transactions  
+- Update or delete any record with a single click
 
-✅ **Transaction History**  
-- Full history table of all transactions  
-- Easy edit/delete options for each entry
+✅ **Responsive UI**  
+- Built using HTML & CSS  
+- Optimized for mobile, tablet, and desktop browsers
 
-✅ **Responsive Design**  
-- Clean UI built with HTML & CSS  
-- Works across desktop, tablet, and mobile devices
+---
+
+## 🖼️ Screenshots & Documentation
+
+📷 Screenshots of the application and  
+📄 A detailed PDF report (explaining structure, features, and code flow)  
+are available inside the repository.
+
+> ✅ Navigate to the `screenshots/` folder and `WealthWise_Report.pdf` for more.
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Technology | Use |
-|------------|-----|
+| Technology | Purpose |
+|------------|---------|
 | **Python** | Backend logic |
 | **Flask** | Web framework |
-| **SQL (MySQL/SQLite)** | Database and data management |
-| **HTML/CSS** | Frontend design |
-| **Chart.js** | Data visualization (bar, pie charts) |
-| **Render** | Live web hosting |
+| **SQL (MySQL/SQLite)** | Data storage |
+| **HTML/CSS** | UI design |
+| **Chart.js** | Data visualization |
+| **Render** | Cloud deployment platform |
 
 ---
-
-## 📸 Screenshots
-
-*(Include screenshots or a screen-recording GIF here if available)*
-
----
-
-## 🚀 How to Run Locally
-
-1. **Clone the repo:**
-   ```bash
-   git clone https://github.com/fadhil-vs/WealthWise-Finance-Manager
-   cd WealthWise-Finance-Manager
